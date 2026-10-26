@@ -16,4 +16,6 @@ class Calculator:
     def pow(self, a, b):
         if a == 0 and b == 0:
             raise ValueError("0 to the power of 0 is undefined")
+        if a == 0 and b < 0:
+            raise ValueError("Cannot raise 0 to a negative power")
         return a ** b
