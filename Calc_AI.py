@@ -19,3 +19,7 @@ class Calculator:
         if a == 0 and b < 0:
             raise ValueError("Cannot raise 0 to a negative power")
         return a ** b
+
+    def mod(self, a, b):
+        return a % b
+
