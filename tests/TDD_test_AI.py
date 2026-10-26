@@ -31,6 +31,15 @@ class TestCalculator(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "Cannot divide by zero"):
             calc.mod(10, 0)
 
+    def test_mod_negative(self):
+        calc = Calculator()
+        result = calc.mod(10, -3)
+        self.assertEqual(result, 1)
+
+        result = calc.mod(-10, -3)
+        self.assertEqual(result, 2)
+
+
 
 
 
