@@ -21,6 +21,11 @@ class TestCalculator(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "Cannot raise 0 to a negative power"):
             calc.pow(0, -2)
 
+    def test_mod(self):
+        calc = Calculator()
+        result = calc.mod(10, 3)
+        self.assertEqual(result, 1)
+
 
 
 
