@@ -14,4 +14,6 @@ class Calculator:
         return a / b
 
     def pow(self, a, b):
+        if a == 0 and b == 0:
+            raise ValueError("0 to the power of 0 is undefined")
         return a ** b
